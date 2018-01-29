@@ -1,7 +1,4 @@
 # IntelliJ
-.idea/
-.idea/
-.idea/
 out/
 .idea_modules/
 *.iml
@@ -18,3 +15,6 @@ buildNumber.properties
 .mvn/timing.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+.sass-cache/
+*.css.map
+.idea/*
