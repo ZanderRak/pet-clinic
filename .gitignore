@@ -2,6 +2,7 @@
 out/
 .idea_modules/
 *.iml
+.idea/*
 
 #Maven
 target/
@@ -17,4 +18,3 @@ buildNumber.properties
 !/.mvn/wrapper/maven-wrapper.jar
 .sass-cache/
 *.css.map
-.idea/*
