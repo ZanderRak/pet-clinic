@@ -44,7 +44,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>web.war</finalName>
+        <finalName>pet-clinic-${version}</finalName>
     </build>
 
 </project>
