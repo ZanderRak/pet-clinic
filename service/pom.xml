@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>service</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>Pet clinic service</name>
     <description>Service functionality</description>
