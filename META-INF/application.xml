@@ -1,0 +1,12 @@
+<application>
+    <display-name>pet clinic</display-name>
+    <module>
+        <web>
+            <web-uri>web.war</web-uri>
+            <context-root>/rest</context-root>
+        </web>
+    </module>
+    <module>
+        <ejb>server.jar</ejb>
+    </module>
+</application>

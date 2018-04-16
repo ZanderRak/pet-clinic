@@ -1,0 +1,5 @@
+<jboss-app>
+    <loader-repository>
+        petcl:archive=jsfejb3.ear
+    </loader-repository>
+</jboss-app>
