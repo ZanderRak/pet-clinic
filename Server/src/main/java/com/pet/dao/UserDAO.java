@@ -1,6 +1,6 @@
-package pet.dao;
+package com.pet.dao;
 
-import pet.entity.Client;
+import com.pet.entity.Client;
 
 import javax.ejb.Local;
 
@@ -8,6 +8,8 @@ import javax.ejb.Local;
 @Local
 public interface UserDAO {
     Client findUserByEmail(String email);
+
+    Client findUserById(String id);
 
     boolean add(Client client);
 

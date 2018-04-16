@@ -1,6 +1,7 @@
-package pet.dao;
+package com.pet.dao;
 
-import pet.entity.Client;
+
+import com.pet.entity.Client;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -17,7 +18,14 @@ public class UserDAOImpl implements UserDAO {
         return entityManager
                 .createNamedQuery("Users.findByEmail", Client.class)
                 .setParameter("email", email)
-                .getSingleResult();
+                .getResultList().stream().findFirst().orElse(null);
+    }
+
+    public Client findUserById(String id) {
+        return entityManager
+                .createNamedQuery("Users.findById", Client.class)
+                .setParameter("userId", id)
+                .getResultList().stream().findFirst().orElse(null);
     }
 
     public boolean add(Client client) {

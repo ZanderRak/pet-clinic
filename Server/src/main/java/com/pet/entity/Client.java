@@ -1,4 +1,7 @@
-package pet.entity;
+package com.pet.entity;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -12,7 +15,13 @@ import java.util.Objects;
  * Client entity
  */
 @Entity
-@NamedQuery(name = "Users.findByEmail", query = "SELECT u from Client u where u.email = :email")
+@Table(name = "client")
+@NamedQueries({
+        @NamedQuery(name = "Users.findByEmail", query = "SELECT u from Client u where u.email = :email"),
+        @NamedQuery(name = "Users.findById", query = "SELECT u from Client u where u.userId = :userId")
+})
+@Getter
+@Setter
 public class Client implements Serializable {
     private static final long serialVersionUID = 1L;
     private static final String EMAIL_PATTERN = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*" +
@@ -21,10 +30,13 @@ public class Client implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "userid")
+    private Integer userId;
     @NotNull
-    private String fistName;
+    @Column(name = "firstname")
+    private String firstName;
     @NotNull
+    @Column(name = "lastname")
     private String lastName;
     @Temporal(javax.persistence.TemporalType.DATE)
     @Past
@@ -33,83 +45,14 @@ public class Client implements Serializable {
     @Pattern(regexp = EMAIL_PATTERN, message = "{invalid.email}")
     private String email;
     @Pattern(regexp = PHONE_NUMBER_PATTERN, message = "{invalid.phonenumber}")
+    @Column(name = "phonenumber")
     private String phoneNumber;
+    @Column(name = "passwordhash")
     private String passwordHash;
+    @Column(name = "passwordsalt")
     private String passwordSalt;
 
     public Client() {
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getPasswordHash() {
-        return passwordHash;
-    }
-
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
-    }
-
-    public String getPasswordSalt() {
-        return passwordSalt;
-    }
-
-    public void setPasswordSalt(String passwordSalt) {
-        this.passwordSalt = passwordSalt;
-    }
-
-    public static String getEmailPattern() {
-        return EMAIL_PATTERN;
-    }
-
-    public static String getPhoneNumberPattern() {
-        return PHONE_NUMBER_PATTERN;
-    }
-
-    public String getFistName() {
-        return fistName;
-    }
-
-    public void setFistName(String fistName) {
-        this.fistName = fistName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -123,10 +66,10 @@ public class Client implements Serializable {
 
         Client client = (Client) entity;
 
-        if (!Objects.equals(id, client.getId())) {
+        if (!Objects.equals(userId, client.getUserId())) {
             return false;
         }
-        if (!Objects.equals(fistName, client.getFistName())) {
+        if (!Objects.equals(firstName, client.getFirstName())) {
             return false;
         }
 
@@ -144,8 +87,8 @@ public class Client implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = id.hashCode();
-        result = 31 * result + fistName.hashCode();
+        int result = userId.hashCode();
+        result = 31 * result + firstName.hashCode();
         result = 31 * result + lastName.hashCode();
         result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
         result = 31 * result + email.hashCode();
