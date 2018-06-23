@@ -22,33 +22,42 @@
       <p>35 Cat st, Boston, 345901, USA</p>
       <p>Phone: 334 9990001</p>
     </div>
-    <div class="registration-buttons">
-      <button id="sign-up-button" name="sign-up">Sign up</button>
-      <button id="log-in-button" name="log-in">Log in</button>
+    <div class="registration-wrap">
+      <div class="registration-buttons" id="registration-buttons">
+        <button id="sign-up-button" name="sign-up-button">
+          <a href="registration.html" target="_blank">Sign up</a>
+        </button>
+        <button id="log-in-button" name="log-in-button">Log in
+        </button>
+      </div>
+      <div id="user">
+        <a href="account.html"></a>
+        <button id="logout">Log out</button>
+      </div>
     </div>
   </div>
 </header>
 <header class="bottom-header clearfix">
   <div class="container">
-      <div class="col">
-        <nav>
-          <button class="hamburger-menu" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
-          <ul class="top-nav">
-            <li class="item-1 item active"><a href="#">Home</a></li>
-            <li class="item-2 item "><a href="doctors.html">Doctors</a></li>
-            <li class="item-3 item"><a href="services.html">Services and prices</a></li>
-            <li class="item-4 item"><a href="shop.html">Shop</a></li>
-            <li class="item-5 item"><a href="#">Schedule</a></li>
-            <li class="item-6 item"><a href="contact.html">Contact Us</a></li>
-            <li class="item-7 item">
-              <form class="search-bar">
-                <input type="text" name="search" placeholder="Search...">
-     <!--       <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>  -->
-              </form>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <div class="col">
+      <nav>
+        <button class="hamburger-menu" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <ul class="top-nav">
+          <li class="item-1 item active"><a href="#">Home</a></li>
+          <li class="item-2 item "><a href="doctors.html">Doctors</a></li>
+          <li class="item-3 item"><a href="services.html">Services and prices</a></li>
+          <li class="item-4 item"><a href="shop.html">Shop</a></li>
+          <li class="item-5 item"><a href="#">Schedule</a></li>
+          <li class="item-6 item"><a href="contact.html">Contact Us</a></li>
+          <li class="item-7 item">
+            <form class="search-bar">
+              <input type="text" name="search" placeholder="Search...">
+              <!--       <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>  -->
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
   <div class="top-cart">
     <a href="cart.html">
@@ -57,206 +66,173 @@
     <p>1</p>
   </div>
 </header>
-
-<!--<<<<<<<<<<<<<<<<<<<<<<Registration Form>>>>>>>>>>>>>>>>>>>>>>>-->
 <main>
-<section id="pop-up-registration-form">
-  <div class="pop-up-form-wrapper">
-    <form class="pop-up-form" method="post">
-      <a href="#" class="close-button" id="close-registration-button">&#10006;</a>
-      <h3>Registration Form</h3>
-        <p>
-          <label for="firstname">First Name:</label>
-          <input id ="firstname" type="text" name="firstname">
-        </p>
-        <p>
-          <label for="lastname">Last Name:</label>
-          <input id="lastname" type="text" name="lastname">
-        </p>
-        <p>
-          <label for="date">Birthday:</label>
-          <input type="date" id="date" name="date"/>
-        </p>
-        <p>
-          <label for="email">Email:</label>
-          <input id="email" type="email" name="email">
-        </p>
-        <p>
-          <label for="password">Password:</label>
-          <input id="password" type="password" name="password">
-        </p>
-        <p>
-          <label for="password-repeat">Password again:</label>
-          <input id="password-repeat" type="password" name="password">
-        </p>
-        <input type="submit" name="submit-button" value="Submit">
-    </form>
-  </div>
-</section>
-<!--<<<<<<<<<<<<<<<<<<<<<<LOG IN Form>>>>>>>>>>>>>>>>>>>>>>>-->
-<section id="pop-up-login-form">
-  <div class="pop-up-form-wrapper">
-    <form class="pop-up-form" method="post">
-      <a href="#" class="close-button" id="close-login-button">&#10006;</a>
-      <h3>Log in</h3>
-      <p>
-        <label for="login-email">Email:</label>
-        <input id="login-email" type="email" name="email">
-      </p>
-      <p>
-        <label for="login-password">Password:</label>
-        <input id="login-password" type="password" name="password">
-      </p>
-      <input type="submit" name="submit-button" value="Submit">
-    </form>
-  </div>
-</section>
-<!--<<<<<<<<<<<<<<<<<<<<<<interactive>>>>>>>>>>>>>>>>>>>>>>>-->
-
-<section class="interactive container-fluid">
-<div class="row flex-container">
-  <!-- ========ASIDE_COLUMN========== -->
-  <aside class="sidebar col-md-3">
-    <h2>News 1</h2>
-    <p>Etiam tempor justo in ante dignissim, sit
-      amet sodales neque maximus. Phasellus sit
-      amet arcu placerat, viverra mi ut, luctus
-      massa. Cras condimentum urna a laoreet iaculis.
-      Praesent ultricies maximus quam, eu volutpat
-      magna volutpat eget. Ut vehicula fringilla
-      nunc ac efficitur.
-    </p>
-  </aside>
-  <!-- ========Bootstrap carousel========== -->
-  <div class="carousel-wrapper col-md-6">
-<div id="carousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-  </ol>
-  <!-- Items -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="static/images/interactive1.png" alt="...">
+  <!--<<<<<<<<<<<<<<<<<<<<<<LOGIN Form>>>>>>>>>>>>>>>>>>>>>>>-->
+  <section id="pop-up-login-section">
+    <div class="pop-up-wrapper">
+      <form class="pop-up-form pop-up-styles" id="login-form">
+        <a href="#" class="close-button" id="close-login-button">&#10006;</a>
+        <h3>Log in</h3>
+        <div>
+          <label for="login-email">Email:</label>
+          <input id="login-email" type="email" name="login-email" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="login-password">Password:</label>
+          <input id="login-password" type="password" name="login-password" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <p id="login-hint"></p>
+        </div>
+        <input id="submit-login-button" type="button" name="login-submit-button" value="Submit">
+      </form>
     </div>
-    <div class="item">
-      <img src="static/images/interactive2.png" alt="...">
+  </section>
+  <!--<<<<<<<<<<<<<<<<<<<<<<interactive>>>>>>>>>>>>>>>>>>>>>>>-->
+  <section class="interactive container-fluid">
+    <div class="row flex-container">
+      <!-- ========ASIDE_COLUMN========== -->
+      <aside class="sidebar col-md-3">
+        <h2>News 1</h2>
+        <p>Etiam tempor justo in ante dignissim, sit
+          amet sodales neque maximus. Phasellus sit
+          amet arcu placerat, viverra mi ut, luctus
+          massa. Cras condimentum urna a laoreet iaculis.
+          Praesent ultricies maximus quam, eu volutpat
+          magna volutpat eget. Ut vehicula fringilla
+          nunc ac efficitur.
+        </p>
+      </aside>
+      <!-- ========Bootstrap carousel========== -->
+      <div class="carousel-wrapper col-md-6">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Items -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="static/images/interactive1.png" alt="...">
+            </div>
+            <div class="item">
+              <img src="static/images/interactive2.png" alt="...">
+            </div>
+            <div class="item">
+              <img src="static/images/interactive3.png" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========ASIDE_COLUMN========== -->
+      <aside class="sidebar col-md-3">
+        <h2>News 2</h2>
+        <p>Etiam tempor justo in ante dignissim, sit
+          amet sodales neque maximus. Phasellus sit
+          amet arcu placerat, viverra mi ut, luctus
+          massa. Cras condimentum urna a laoreet iaculis.
+          Praesent ultricies maximus quam, eu volutpat
+          magna volutpat eget. Ut vehicula fringilla
+          nunc ac efficitur.
+        </p>
+      </aside>
     </div>
-    <div class="item">
-      <img src="static/images/interactive3.png" alt="...">
+  </section>
+  <!--<<<<<<<<<<<<<<<<<<<<<<MAIN>>>>>>>>>>>>>>>>>>>>>>>-->
+  <!--<<<<<<<<<<<Request-appointment>>>>>>>>>-->
+  <form class="request-appointment">
+    <button class="request-appointment-button"
+            value="request-appointment" name="button">
+      Request an Appointment
+    </button>
+  </form>
+  <section class="block-wrapper container">
+    <div class="row">
+      <main class="col-lg-9 col-sm-8 main-block">
+        <h1>Our clinic</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nunc ullamcorper, nunc nec volutpat elementum,
+          enim risus condimentum lectus, quis pretium urna
+          ex in ipsum. Cras a magna eget arcu iaculis gravida
+          non ut justo. Sed aliquam, nibh ac scelerisque accumsan,
+          turpis libero vestibulum erat, vel aliquam lacus
+          mauris ut nibh. Pellentesque lacinia mi et
+          sollicitudin fermentum. Morbi a sollicitudin erat.
+          Vestibulum luctus hendrerit aliquam. In id dui
+          in quam iaculis cursus.
+        </p>
+        <p>Donec justo sapien,
+          lobortis eget molestie vitae, tempus ac lorem.
+          Mauris vestibulum lectus eu posuere pretium.
+          Nunc volutpat venenatis est, vitae auctor lacus
+          hendrerit sit amet. Aliquam lacus risus,
+          consectetur vitae scelerisque non, iaculis
+          non turpis. Duis iaculis faucibus erat, sed
+          tempus enim.
+        </p>
+        <p>Aliquam viverra lorem eu convallis consectetur.
+          Maecenas urna lacus, malesuada at volutpat eget,
+          tincidunt sit amet purus. Aenean ut justo dapibus,
+          vulputate sapien at, molestie justo. Nam molestie
+          consectetur mi. Quisque scelerisque eleifend tellus,
+          id fringilla tellus luctus sed. Proin ac dolor sit
+          amet arcu aliquet imperdiet. Fusce consectetur eros
+          vitae sollicitudin feugiat. In quis ex ac lectus
+          viverra condimentum vel lacinia metus.
+        </p>
+      </main>
+      <aside class="col-lg-3 col-sm-4 sidebar">
+
+        <table class="office-hours">
+          <caption><h2>Office Hours</h2></caption>
+          <tr>
+            <th>Day</th>
+            <th>Open</th>
+            <th>Closed</th>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>8:00am</td>
+            <td>8:00pm</td>
+          </tr>
+          <tr>
+            <td>Thusday</td>
+            <td>8:00am</td>
+            <td>8:00pm</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>8:00am</td>
+            <td>8:00pm</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8:00am</td>
+            <td>8:00pm</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8:00am</td>
+            <td>8:00pm</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>8:00am</td>
+            <td>8:00pm</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+            <td>Closed</td>
+          </tr>
+        </table>
+      </aside>
     </div>
-  </div>
-</div>
-  </div>
-  <!-- ========ASIDE_COLUMN========== -->
-  <aside class="sidebar col-md-3">
-    <h2>News 2</h2>
-    <p>Etiam tempor justo in ante dignissim, sit
-      amet sodales neque maximus. Phasellus sit
-      amet arcu placerat, viverra mi ut, luctus
-      massa. Cras condimentum urna a laoreet iaculis.
-      Praesent ultricies maximus quam, eu volutpat
-      magna volutpat eget. Ut vehicula fringilla
-      nunc ac efficitur.
-    </p>
-  </aside>
-</div>
-</section>
-
-<!--<<<<<<<<<<<<<<<<<<<<<<MAIN>>>>>>>>>>>>>>>>>>>>>>>-->
-<!--<<<<<<<<<<<Request-appointment>>>>>>>>>-->
-<form class="request-appointment">
-  <button class="request-appointment-button"
-          value="request-appointment" name="button">
-          Request an Appointment
-  </button>
-</form>
-
-<section class="block-wrapper container">
-  <div class="row">
-  <main class="col-lg-9 col-sm-8 main-block">
-    <h1>Our clinic</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Nunc ullamcorper, nunc nec volutpat elementum,
-      enim risus condimentum lectus, quis pretium urna
-      ex in ipsum. Cras a magna eget arcu iaculis gravida
-      non ut justo. Sed aliquam, nibh ac scelerisque accumsan,
-      turpis libero vestibulum erat, vel aliquam lacus
-      mauris ut nibh. Pellentesque lacinia mi et
-      sollicitudin fermentum. Morbi a sollicitudin erat.
-      Vestibulum luctus hendrerit aliquam. In id dui
-      in quam iaculis cursus.
-    </p>
-    <p>Donec justo sapien,
-      lobortis eget molestie vitae, tempus ac lorem.
-      Mauris vestibulum lectus eu posuere pretium.
-      Nunc volutpat venenatis est, vitae auctor lacus
-      hendrerit sit amet. Aliquam lacus risus,
-      consectetur vitae scelerisque non, iaculis
-      non turpis. Duis iaculis faucibus erat, sed
-      tempus enim.
-    </p>
-    <p>Aliquam viverra lorem eu convallis consectetur.
-      Maecenas urna lacus, malesuada at volutpat eget,
-      tincidunt sit amet purus. Aenean ut justo dapibus,
-      vulputate sapien at, molestie justo. Nam molestie
-      consectetur mi. Quisque scelerisque eleifend tellus,
-      id fringilla tellus luctus sed. Proin ac dolor sit
-      amet arcu aliquet imperdiet. Fusce consectetur eros
-      vitae sollicitudin feugiat. In quis ex ac lectus
-      viverra condimentum vel lacinia metus.
-    </p>
-  </main>
-  <aside class="col-lg-3 col-sm-4 sidebar">
-
-    <table class="office-hours">
-      <caption><h2>Office Hours</h2></caption>
-      <tr>
-        <th>Day</th>
-        <th>Open</th>
-        <th>Closed</th>
-      </tr>
-      <tr>
-        <td>Monday</td>
-        <td>8:00am</td>
-        <td>8:00pm</td>
-      </tr>
-      <tr>
-        <td>Thusday</td>
-        <td>8:00am</td>
-        <td>8:00pm</td>
-      </tr>
-      <tr>
-        <td>Wednesday</td>
-        <td>8:00am</td>
-        <td>8:00pm</td>
-      </tr>
-      <tr>
-        <td>Thursday</td>
-        <td>8:00am</td>
-        <td>8:00pm</td>
-      </tr>
-      <tr>
-        <td>Friday</td>
-        <td>8:00am</td>
-        <td>8:00pm</td>
-      </tr>
-      <tr>
-        <td>Saturday</td>
-        <td>8:00am</td>
-        <td>8:00pm</td>
-      </tr>
-      <tr>
-        <td>Sunday</td>
-        <td>Closed</td>
-        <td>Closed</td>
-      </tr>
-    </table>
-  </aside>
-  </div>
-</section>
+  </section>
 
 </main>
 
@@ -265,27 +241,27 @@
 </div>
 <!--<<<<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>>>>>>>-->
 <footer>
-    <div class="top-footer flex-container">
-      <div class="flex-child">
-        <p>35 Cat st, Boston, 345901, USA</p>
-        <p>Phone: 334 9990001</p>
-        <ul class="social-list">
-          <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
-      <div class="flex-child">
-        <ul class="footer-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="doctors.html">Doctors</a></li>
-          <li><a href="services.html">Services and prices</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="#">Schedule</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
+  <div class="top-footer flex-container">
+    <div class="flex-child">
+      <p>35 Cat st, Boston, 345901, USA</p>
+      <p>Phone: 334 9990001</p>
+      <ul class="social-list">
+        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
     </div>
+    <div class="flex-child">
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="services.html">Services and prices</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="copyright-footer">
     <p>&copy; 2018 Pet Clinic</p>
   </div>
@@ -293,6 +269,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="static/javascripts/bootstrap.min.js"></script>
-<script src="static/javascripts/allscripts.js"></script>
+<script src="static/javascripts/common.js"></script>
+<script src="static/javascripts/login.js"></script>
 </body>
 </html>

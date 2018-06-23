@@ -8964,17 +8964,43 @@ a, a:hover, a:visited, a:active, a:focus {
 }
 
 /* line 89, ../sass/_custom.scss */
+#user {
+  display: none;
+}
+/* line 91, ../sass/_custom.scss */
+#user a {
+  color: black;
+  text-decoration: underline;
+  display: inline-block;
+  padding-right: 10px;
+}
+/* line 97, ../sass/_custom.scss */
+#user button {
+  display: inline-block;
+  font-weight: normal;
+  padding: 0;
+  background: transparent;
+  color: #696969;
+}
+/* line 103, ../sass/_custom.scss */
+#user button::before {
+  content: "|";
+  color: black;
+  margin-right: 10px;
+}
+
+/* line 110, ../sass/_custom.scss */
 #sign-up-button {
   background-image: linear-gradient(to top, #f73939, #ffe256);
 }
 
-/* line 93, ../sass/_custom.scss */
+/* line 114, ../sass/_custom.scss */
 #log-in-button {
   background-image: linear-gradient(to top, #696969, #e6e6e6);
 }
 
 /****************************Bottom-Header****************************/
-/* line 98, ../sass/_custom.scss */
+/* line 119, ../sass/_custom.scss */
 .bottom-header {
   background: forestgreen;
   text-align: center;
@@ -8982,7 +9008,7 @@ a, a:hover, a:visited, a:active, a:focus {
   position: relative;
 }
 
-/* line 104, ../sass/_custom.scss */
+/* line 125, ../sass/_custom.scss */
 .sticky {
   position: fixed;
   width: 100%;
@@ -8990,18 +9016,18 @@ a, a:hover, a:visited, a:active, a:focus {
   top: 0;
 }
 
-/* line 110, ../sass/_custom.scss */
+/* line 131, ../sass/_custom.scss */
 .sticky + main {
   padding-top: 90px;
 }
 
-/* line 113, ../sass/_custom.scss */
+/* line 134, ../sass/_custom.scss */
 .top-nav {
   margin-bottom: 0;
   padding-left: 0;
   margin: 0 -15px;
 }
-/* line 117, ../sass/_custom.scss */
+/* line 138, ../sass/_custom.scss */
 .top-nav li {
   display: inline-block;
   padding: 17px 5px;
@@ -9009,32 +9035,32 @@ a, a:hover, a:visited, a:active, a:focus {
   margin-right: -4px;
   z-index: 100;
 }
-/* line 123, ../sass/_custom.scss */
+/* line 144, ../sass/_custom.scss */
 .top-nav li:hover {
   background-color: #066b12;
 }
-/* line 126, ../sass/_custom.scss */
+/* line 147, ../sass/_custom.scss */
 .top-nav li a {
   color: #fff;
   text-decoration: none;
   padding: 15px 8px;
 }
 
-/* line 133, ../sass/_custom.scss */
+/* line 154, ../sass/_custom.scss */
 .top-nav li.active {
   background-color: #066b12;
 }
 
-/* line 136, ../sass/_custom.scss */
+/* line 157, ../sass/_custom.scss */
 li.item-7 {
   padding: 9px;
 }
-/* line 138, ../sass/_custom.scss */
+/* line 159, ../sass/_custom.scss */
 li.item-7:hover {
   background-color: forestgreen !important;
 }
 
-/* line 142, ../sass/_custom.scss */
+/* line 163, ../sass/_custom.scss */
 .hamburger-menu {
   display: none;
   padding: 3px;
@@ -9043,7 +9069,7 @@ li.item-7:hover {
   background: transparent;
 }
 
-/* line 150, ../sass/_custom.scss */
+/* line 171, ../sass/_custom.scss */
 .search-bar input[type="text"] {
   margin-right: -4px;
   padding: 7px;
@@ -9053,17 +9079,17 @@ li.item-7:hover {
   box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.3), inset -2px -2px 9px rgba(0, 0, 0, 0.1);
   border: 1px solid forestgreen;
 }
-/* line 159, ../sass/_custom.scss */
+/* line 180, ../sass/_custom.scss */
 .search-bar input[type="text"]:focus {
   width: 100%;
 }
-/* line 163, ../sass/_custom.scss */
+/* line 184, ../sass/_custom.scss */
 .search-bar button {
   padding: 8px 12px;
 }
 
 /***********CART************/
-/* line 169, ../sass/_custom.scss */
+/* line 190, ../sass/_custom.scss */
 .top-cart {
   background: transparent;
   font-size: 31px;
@@ -9072,28 +9098,28 @@ li.item-7:hover {
   top: 5px;
   transition: all 0.5s;
 }
-/* line 176, ../sass/_custom.scss */
+/* line 197, ../sass/_custom.scss */
 .top-cart:hover {
   transform: rotateZ(360deg);
 }
-/* line 179, ../sass/_custom.scss */
+/* line 200, ../sass/_custom.scss */
 .top-cart p {
   font-size: 15px;
-  color: red;
+  color: #f73939;
   position: absolute;
   left: 17px;
   top: 9px;
   font-weight: bold;
 }
 
-/****************************Pop-up-form****************************/
-/* line 189, ../sass/_custom.scss */
-#pop-up-registration-form, #pop-up-login-form {
+/****************************Pop-up-forms****************************/
+/* line 210, ../sass/_custom.scss */
+#pop-up-login-section {
   display: none;
 }
 
-/* line 192, ../sass/_custom.scss */
-.pop-up-form-wrapper {
+/* line 213, ../sass/_custom.scss */
+.pop-up-wrapper {
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
@@ -9105,46 +9131,67 @@ li.item-7:hover {
   color: #000;
 }
 
-/* line 203, ../sass/_custom.scss */
-.pop-up-form {
-  background: #fff;
-  border: #e6e6e6;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 10px 40px;
-  border-radius: 3px;
-  position: relative;
-  top: 10%;
-}
-/* line 212, ../sass/_custom.scss */
+/* line 226, ../sass/_custom.scss */
 .pop-up-form h3 {
   margin-bottom: 30px;
 }
-/* line 215, ../sass/_custom.scss */
-.pop-up-form p {
-  margin-bottom: 20px;
+/* line 229, ../sass/_custom.scss */
+.pop-up-form div {
+  margin-bottom: 15px;
 }
-/* line 218, ../sass/_custom.scss */
+/* line 232, ../sass/_custom.scss */
 .pop-up-form label {
   display: inline-block;
-  width: 27%;
-  color: #000;
+  width: 40%;
+  color: black;
 }
-/* line 223, ../sass/_custom.scss */
+/* line 236, ../sass/_custom.scss */
+.pop-up-form label sup {
+  color: #f73939;
+}
+/* line 240, ../sass/_custom.scss */
 .pop-up-form input {
   display: inline-block;
-  width: 62%;
+  width: 56%;
+  color: black;
 }
-/* line 227, ../sass/_custom.scss */
-.pop-up-form input[type="submit"] {
+/* line 245, ../sass/_custom.scss */
+.pop-up-form input[type="button"] {
+  width: auto;
   background: forestgreen;
-  box-shadow: none;
+  padding: 7px 30px;
   border: 1px solid forestgreen;
-  color: #fff;
   margin: 15px;
+  color: white;
+  transition: background-color 0.5s;
+}
+/* line 253, ../sass/_custom.scss */
+.pop-up-form input[type="button"]:hover {
+  background-color: #066b12;
+}
+/* line 257, ../sass/_custom.scss */
+.pop-up-form p.invalid-hint {
+  position: absolute;
+  visibility: hidden;
+  color: #f73939;
+  margin-left: 45%;
+  width: auto;
+  text-align: left;
+  margin-top: 8px;
+  font-size: 1em;
+}
+/* line 267, ../sass/_custom.scss */
+.pop-up-form p.show-invalid-hint {
+  position: static;
+  visibility: visible;
 }
 
-/* line 235, ../sass/_custom.scss */
+/* line 272, ../sass/_custom.scss */
+.invalid-input {
+  border: 1px solid #f73939;
+}
+
+/* line 275, ../sass/_custom.scss */
 .close-button {
   position: absolute;
   top: -10px;
@@ -9156,18 +9203,74 @@ li.item-7:hover {
   padding: 6px 10px;
   transition: background 0.5s;
 }
-
-/* line 247, ../sass/_custom.scss */
+/* line 285, ../sass/_custom.scss */
 .close-button:hover {
-  background: red;
+  background: #f73939;
+}
+
+/* line 289, ../sass/_custom.scss */
+.pop-up-styles {
+  background: #fff;
+  max-width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  position: relative;
+}
+
+/* line 297, ../sass/_custom.scss */
+#login-form {
+  margin: 0 auto;
+  padding: 10px 25px;
+  margin-top: 10%;
+}
+/* line 301, ../sass/_custom.scss */
+#login-form label {
+  width: 26%;
+}
+/* line 304, ../sass/_custom.scss */
+#login-form input {
+  width: 70%;
+}
+/* line 307, ../sass/_custom.scss */
+#login-form input[type="button"] {
+  width: auto;
+}
+
+/* line 311, ../sass/_custom.scss */
+.registration-wrapper {
+  text-align: center;
+  color: black;
+  background: #eee;
+}
+
+/* line 316, ../sass/_custom.scss */
+#registration-form {
+  background: white;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 10px 40px;
+}
+
+/* line 322, ../sass/_custom.scss */
+#regular-pop-up {
+  padding: 35px;
+  max-width: 300px;
+  margin: 10% auto;
+}
+
+/* line 327, ../sass/_custom.scss */
+#onsubmit-hint, #login-hint {
+  color: #f73939;
+  margin-top: 20px;
 }
 
 /*******************************Interactive********************************/
-/* line 252, ../sass/_custom.scss */
+/* line 333, ../sass/_custom.scss */
 section.interactive {
   max-width: 1100px;
 }
-/* line 254, ../sass/_custom.scss */
+/* line 335, ../sass/_custom.scss */
 section.interactive aside {
   flex: 1 1 170px;
   background: white;
@@ -9175,22 +9278,20 @@ section.interactive aside {
   color: #575757;
   border-right: 2px solid #e6e6e6;
   border-left: 2px solid #e6e6e6;
-  /* order: 2; */
 }
-/* line 261, ../sass/_custom.scss */
+/* line 342, ../sass/_custom.scss */
 section.interactive aside p {
   color: #575757;
 }
 
-/* line 266, ../sass/_custom.scss */
+/* line 347, ../sass/_custom.scss */
 .carousel-wrapper {
   flex: 8 1 300px;
   padding: 30px 15px;
-  /* order: 1; */
 }
 
 /************************REQUEST_APPOINTMENT************************/
-/* line 272, ../sass/_custom.scss */
+/* line 353, ../sass/_custom.scss */
 form.request-appointment {
   margin-top: 30px;
   text-align: center;
@@ -9200,28 +9301,28 @@ form.request-appointment {
   background: url("../images/green_leaves.jpg") repeat bottom;
   overflow: hidden;
 }
-/* line 280, ../sass/_custom.scss */
+/* line 361, ../sass/_custom.scss */
 form.request-appointment button {
   padding: 12px 15px;
   background-image: linear-gradient(to top, #f73939, #ffe256);
 }
 
 /**************************Main***************************/
-/* line 286, ../sass/_custom.scss */
+/* line 367, ../sass/_custom.scss */
 .block-wrapper {
   margin-top: 40px;
 }
 
-/* line 289, ../sass/_custom.scss */
+/* line 370, ../sass/_custom.scss */
 .main-block {
   padding: 0 30px 0 15px;
 }
-/* line 291, ../sass/_custom.scss */
+/* line 372, ../sass/_custom.scss */
 .main-block h1 {
   border-bottom: 1px solid lightgray;
 }
 
-/* line 296, ../sass/_custom.scss */
+/* line 377, ../sass/_custom.scss */
 .sidebar {
   background: forestgreen;
   color: #fff;
@@ -9230,47 +9331,47 @@ form.request-appointment button {
   margin-top: 20px;
 }
 
-/* line 303, ../sass/_custom.scss */
+/* line 384, ../sass/_custom.scss */
 .office-hours {
   width: 100%;
 }
-/* line 305, ../sass/_custom.scss */
+/* line 386, ../sass/_custom.scss */
 .office-hours h2 {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-/* line 309, ../sass/_custom.scss */
+/* line 390, ../sass/_custom.scss */
 .office-hours td {
   padding: 5px 9px 10px;
 }
-/* line 312, ../sass/_custom.scss */
+/* line 393, ../sass/_custom.scss */
 .office-hours th {
   padding: 5px 9px 10px;
 }
 
 /************************SERVICES AND PRICES_PAGE*************************/
-/* line 318, ../sass/_custom.scss */
+/* line 399, ../sass/_custom.scss */
 .services-wrap {
   text-align: justify;
 }
-/* line 320, ../sass/_custom.scss */
+/* line 401, ../sass/_custom.scss */
 .services-wrap h1 {
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 10px;
 }
 
-/* line 325, ../sass/_custom.scss */
+/* line 406, ../sass/_custom.scss */
 .services {
   max-width: 800px;
   margin: 0 auto;
 }
-/* line 328, ../sass/_custom.scss */
+/* line 409, ../sass/_custom.scss */
 .services li {
   margin: 50px 0;
   border: 1px solid forestgreen;
 }
 
-/* line 333, ../sass/_custom.scss */
+/* line 414, ../sass/_custom.scss */
 .service {
   padding: 0 20px 20px;
   background: #fff;
@@ -9278,7 +9379,7 @@ form.request-appointment button {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 339, ../sass/_custom.scss */
+/* line 420, ../sass/_custom.scss */
 .service span {
   width: 90px;
   display: block;
@@ -9287,22 +9388,22 @@ form.request-appointment button {
   margin: 0 auto;
   background: #fff;
 }
-/* line 346, ../sass/_custom.scss */
+/* line 427, ../sass/_custom.scss */
 .service span img {
   width: 50px;
   height: 50px;
   transition: 0.5s;
 }
-/* line 350, ../sass/_custom.scss */
+/* line 431, ../sass/_custom.scss */
 .service span img:hover {
   transform: scale(1.1);
 }
-/* line 355, ../sass/_custom.scss */
+/* line 436, ../sass/_custom.scss */
 .service:hover {
   color: #066b12;
 }
 
-/* line 359, ../sass/_custom.scss */
+/* line 440, ../sass/_custom.scss */
 .service-description {
   width: 100%;
   padding: 5px 30px;
@@ -9310,26 +9411,36 @@ form.request-appointment button {
   margin-bottom: 10px;
 }
 
-/* line 369, ../sass/_custom.scss */
+/* line 446, ../sass/_custom.scss */
+.active-service {
+  text-decoration: underline;
+}
+
+/* line 451, ../sass/_custom.scss */
 .shown {
   display: block !important;
 }
 
+/* line 454, ../sass/_custom.scss */
+.hidden {
+  display: none !important;
+}
+
 /************************DOCTORS_PAGE*************************/
-/* line 374, ../sass/_custom.scss */
+/* line 459, ../sass/_custom.scss */
 .doctors {
   text-align: center;
 }
-/* line 376, ../sass/_custom.scss */
+/* line 461, ../sass/_custom.scss */
 .doctors h1 {
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 10px;
 }
-/* line 379, ../sass/_custom.scss */
+/* line 464, ../sass/_custom.scss */
 .doctors h1 ~ p {
   margin: 10px auto;
 }
-/* line 383, ../sass/_custom.scss */
+/* line 468, ../sass/_custom.scss */
 .doctors p {
   padding-top: 10px;
   text-align: justify;
@@ -9337,28 +9448,27 @@ form.request-appointment button {
   margin: 10px;
 }
 
-/* line 391, ../sass/_custom.scss */
+/* line 475, ../sass/_custom.scss */
 .doctors-list {
   margin-bottom: 40px;
 }
-/* line 393, ../sass/_custom.scss */
+/* line 477, ../sass/_custom.scss */
 .doctors-list li {
   display: inline-block;
   width: 250px;
   margin: 18px;
   text-align: center;
 }
-/* line 398, ../sass/_custom.scss */
+/* line 482, ../sass/_custom.scss */
 .doctors-list li .doctor-photo {
   width: 100%;
-  height: 205px;
 }
-/* line 401, ../sass/_custom.scss */
+/* line 484, ../sass/_custom.scss */
 .doctors-list li .doctor-photo img {
   padding: 25px;
-  height: 100%;
+  width: 100%;
 }
-/* line 407, ../sass/_custom.scss */
+/* line 490, ../sass/_custom.scss */
 .doctors-list li .doctor-info h3 {
   background: forestgreen;
   color: white;
@@ -9366,38 +9476,39 @@ form.request-appointment button {
   font-family: Georgia, serif;
   margin-top: 0;
 }
-/* line 414, ../sass/_custom.scss */
+/* line 497, ../sass/_custom.scss */
 .doctors-list li .doctor-info p {
   color: #696969;
-  padding-top: 0;
+  padding: 0 25px;
   font-style: italic;
 }
 
 /**************Styles for flipping cards**********/
-/* line 423, ../sass/_custom.scss */
+/* line 506, ../sass/_custom.scss */
 .flip-container {
   perspective: 1000;
 }
 
-/* line 426, ../sass/_custom.scss */
+/* line 509, ../sass/_custom.scss */
 .flip-container:hover .flipper,
 .flip-container.hover .flipper {
   transform: rotateY(180deg);
 }
 
-/* line 430, ../sass/_custom.scss */
+/* line 513, ../sass/_custom.scss */
 .flip-container, .front, .back {
-  height: 312px;
+  height: 330px;
+  border-radius: 3px;
 }
 
-/* line 434, ../sass/_custom.scss */
+/* line 517, ../sass/_custom.scss */
 .flipper {
   transition: 0.8s;
   transform-style: preserve-3d;
   position: relative;
 }
 
-/* line 439, ../sass/_custom.scss */
+/* line 522, ../sass/_custom.scss */
 .front, .back {
   box-shadow: -5px -3px 15px 2px rgba(0, 0, 0, 0.1);
   border: 1px solid lightgray;
@@ -9408,60 +9519,64 @@ form.request-appointment button {
   left: 0;
 }
 
-/* line 448, ../sass/_custom.scss */
+/* line 531, ../sass/_custom.scss */
 .front {
   z-index: 2;
 }
 
-/* line 451, ../sass/_custom.scss */
+/* line 534, ../sass/_custom.scss */
 .back {
   transform: rotateY(180deg);
 }
+/* line 536, ../sass/_custom.scss */
+.back p {
+  padding: 15px;
+}
 
 /*************************SHOP_PAGE**************************/
-/* line 456, ../sass/_custom.scss */
+/* line 542, ../sass/_custom.scss */
 .shop {
   max-width: 1000px;
 }
 
-/* line 459, ../sass/_custom.scss */
+/* line 545, ../sass/_custom.scss */
 .shop-list {
   margin: 0 auto;
   text-align: center;
 }
-/* line 462, ../sass/_custom.scss */
+/* line 548, ../sass/_custom.scss */
 .shop-list li {
   display: inline;
 }
-/* line 464, ../sass/_custom.scss */
+/* line 550, ../sass/_custom.scss */
 .shop-list li + li:before {
   content: "|";
   padding: 10px;
 }
-/* line 468, ../sass/_custom.scss */
+/* line 554, ../sass/_custom.scss */
 .shop-list li a {
   color: #696969;
   transition: all 0.5s;
 }
-/* line 471, ../sass/_custom.scss */
+/* line 557, ../sass/_custom.scss */
 .shop-list li a:hover {
   color: black;
   text-decoration: underline;
 }
 
-/* line 478, ../sass/_custom.scss */
+/* line 564, ../sass/_custom.scss */
 .products-grid {
-  margin: 40px -20px 40px 0;
+  margin: 20px -20px 40px 0;
   display: flex;
   flex-flow: row wrap;
 }
-/* line 482, ../sass/_custom.scss */
+/* line 568, ../sass/_custom.scss */
 .products-grid .product-item {
   width: 25%;
   position: relative;
 }
 
-/* line 487, ../sass/_custom.scss */
+/* line 573, ../sass/_custom.scss */
 .product {
   border: 1px solid #e6e6e6;
   margin: 20px 20px 0 0;
@@ -9470,18 +9585,18 @@ form.request-appointment button {
   padding: 15px;
   position: relative;
 }
-/* line 495, ../sass/_custom.scss */
+/* line 581, ../sass/_custom.scss */
 .product p {
   font-weight: bold;
   color: black;
 }
-/* line 499, ../sass/_custom.scss */
+/* line 585, ../sass/_custom.scss */
 .product .product-photo {
   position: relative;
   padding-bottom: 100%;
   overflow: hidden;
 }
-/* line 503, ../sass/_custom.scss */
+/* line 589, ../sass/_custom.scss */
 .product .product-photo img {
   position: absolute;
   top: 0;
@@ -9492,22 +9607,21 @@ form.request-appointment button {
   max-height: 100%;
   margin: auto;
 }
-/* line 514, ../sass/_custom.scss */
+/* line 600, ../sass/_custom.scss */
 .product h4 {
   text-align: justify;
-  margin-bottom: 15px;
   font-size: 1em;
   line-height: 1.2;
   overflow: hidden;
   height: 48px;
 }
 
-/* line 523, ../sass/_custom.scss */
+/* line 608, ../sass/_custom.scss */
 .price-wrapper {
   font-size: 1.4em;
   text-align: center;
 }
-/* line 526, ../sass/_custom.scss */
+/* line 611, ../sass/_custom.scss */
 .price-wrapper p {
   display: inline-block;
   text-align: center;
@@ -9515,14 +9629,14 @@ form.request-appointment button {
   margin: 0;
   color: black;
 }
-/* line 533, ../sass/_custom.scss */
+/* line 618, ../sass/_custom.scss */
 .price-wrapper .buy-button {
   display: inline-block;
   padding: 5px 15px;
   width: 49%;
 }
 
-/* line 539, ../sass/_custom.scss */
+/* line 624, ../sass/_custom.scss */
 .hidden-description {
   display: none;
   position: absolute;
@@ -9534,39 +9648,40 @@ form.request-appointment button {
   text-align: justify;
   box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1), 1px -1px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 550, ../sass/_custom.scss */
+/* line 635, ../sass/_custom.scss */
 .hidden-description span {
   margin-bottom: 10px;
   display: block;
   text-align: center;
+  transform: rotate(180deg);
 }
-/* line 555, ../sass/_custom.scss */
+/* line 641, ../sass/_custom.scss */
 .hidden-description p {
   color: black;
 }
 
-/* line 559, ../sass/_custom.scss */
+/* line 645, ../sass/_custom.scss */
 .shown-description {
   display: block;
 }
 
 /********PAGINATION*******/
-/* line 563, ../sass/_custom.scss */
+/* line 649, ../sass/_custom.scss */
 .pagination-nav {
   text-align: center;
 }
 
 /*************************CART_PAGE**************************/
-/* line 567, ../sass/_custom.scss */
+/* line 653, ../sass/_custom.scss */
 section.cart {
   max-width: 1200px;
 }
-/* line 569, ../sass/_custom.scss */
+/* line 655, ../sass/_custom.scss */
 section.cart h1 {
   padding: 15px 0 8px;
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 573, ../sass/_custom.scss */
+/* line 659, ../sass/_custom.scss */
 section.cart h3 {
   background: forestgreen;
   color: white;
@@ -9574,20 +9689,20 @@ section.cart h3 {
   margin-bottom: 0;
 }
 
-/* line 581, ../sass/_custom.scss */
+/* line 667, ../sass/_custom.scss */
 .order-form div {
   margin: 20px auto;
 }
-/* line 583, ../sass/_custom.scss */
+/* line 669, ../sass/_custom.scss */
 .order-form div:last-child {
   text-align: center;
 }
-/* line 587, ../sass/_custom.scss */
+/* line 673, ../sass/_custom.scss */
 .order-form input {
   display: inline-block;
   width: 65%;
 }
-/* line 591, ../sass/_custom.scss */
+/* line 677, ../sass/_custom.scss */
 .order-form button {
   padding: 10px 10px;
   display: inline-block;
@@ -9595,22 +9710,22 @@ section.cart h3 {
   width: 115px;
   margin-left: 10px;
 }
-/* line 598, ../sass/_custom.scss */
+/* line 684, ../sass/_custom.scss */
 .order-form .return-home-button {
   background-image: linear-gradient(to top, #696969, #e6e6e6);
 }
-/* line 602, ../sass/_custom.scss */
+/* line 688, ../sass/_custom.scss */
 .order-form label {
   color: black;
   display: inline-block;
   width: 32%;
 }
-/* line 606, ../sass/_custom.scss */
-.order-form label span {
-  color: #af0002;
+/* line 692, ../sass/_custom.scss */
+.order-form label sup {
+  color: #f73939;
 }
 
-/* line 613, ../sass/_custom.scss */
+/* line 698, ../sass/_custom.scss */
 .order-list {
   display: flex;
   flex-flow: column nowrap;
@@ -9618,85 +9733,85 @@ section.cart h3 {
   margin-bottom: 0;
 }
 
-/* line 619, ../sass/_custom.scss */
+/* line 704, ../sass/_custom.scss */
 .order-item {
   display: flex;
   flex-flow: row nowrap;
 }
-/* line 622, ../sass/_custom.scss */
+/* line 707, ../sass/_custom.scss */
 .order-item > div {
   padding: 20px;
   border: 1 px solid #e6e6e6;
 }
-/* line 626, ../sass/_custom.scss */
+/* line 711, ../sass/_custom.scss */
 .order-item .product-photo {
   width: 25%;
 }
-/* line 628, ../sass/_custom.scss */
+/* line 713, ../sass/_custom.scss */
 .order-item .product-photo img {
   width: 100%;
 }
-/* line 632, ../sass/_custom.scss */
+/* line 717, ../sass/_custom.scss */
 .order-item .product-description {
   width: 50%;
 }
-/* line 635, ../sass/_custom.scss */
+/* line 720, ../sass/_custom.scss */
 .order-item .product-price {
   width: 25%;
   display: flex;
   flex-flow: column nowrap;
 }
-/* line 639, ../sass/_custom.scss */
+/* line 724, ../sass/_custom.scss */
 .order-item .product-price button {
   background: transparent;
   color: #c3c3c3;
 }
-/* line 642, ../sass/_custom.scss */
+/* line 727, ../sass/_custom.scss */
 .order-item .product-price button:hover {
   color: #696969;
 }
-/* line 646, ../sass/_custom.scss */
+/* line 731, ../sass/_custom.scss */
 .order-item .product-price div {
   padding: 10px 0;
 }
 
-/* line 651, ../sass/_custom.scss */
+/* line 736, ../sass/_custom.scss */
 .total-sum-wrapper {
   text-align: center;
   padding: 15px;
   background: lightgray;
   color: black;
 }
-/* line 657, ../sass/_custom.scss */
+/* line 742, ../sass/_custom.scss */
 .total-sum-wrapper span {
   display: inline-block;
 }
-/* line 660, ../sass/_custom.scss */
+/* line 745, ../sass/_custom.scss */
 .total-sum-wrapper .total-sum {
   font-size: 1.5em;
   padding-left: 10px;
 }
 
 /*************************CONTACTS_PAGE**************************/
-/* line 666, ../sass/_custom.scss */
+/* line 751, ../sass/_custom.scss */
 .contacts {
   margin-bottom: 40px;
 }
-/* line 668, ../sass/_custom.scss */
+/* line 753, ../sass/_custom.scss */
 .contacts h1 {
   padding: 15px 0 8px;
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 672, ../sass/_custom.scss */
+/* line 757, ../sass/_custom.scss */
 .contacts p {
   padding: 10px 15px 5px;
 }
-/* line 675, ../sass/_custom.scss */
+/* line 760, ../sass/_custom.scss */
 .contacts iframe {
   max-width: 100%;
 }
 
-/* line 680, ../sass/_custom.scss */
+/* line 765, ../sass/_custom.scss */
 #up-button {
   background: forestgreen;
   border-radius: 50%;
@@ -9707,7 +9822,7 @@ section.cart h3 {
   z-index: 999;
   border: 5px solid #fff;
 }
-/* line 690, ../sass/_custom.scss */
+/* line 775, ../sass/_custom.scss */
 #up-button a {
   font-size: 25px;
   font-weight: bold;
@@ -9715,66 +9830,66 @@ section.cart h3 {
   display: block;
 }
 
-/* line 697, ../sass/_custom.scss */
+/* line 782, ../sass/_custom.scss */
 .show-up-button {
   display: block !important;
 }
 
 /*************************FOOTER**************************/
-/* line 701, ../sass/_custom.scss */
+/* line 786, ../sass/_custom.scss */
 footer {
   margin-top: 40px;
 }
 
-/* line 704, ../sass/_custom.scss */
+/* line 789, ../sass/_custom.scss */
 .top-footer {
   background: #2b2b2b;
   align-items: center;
   padding: 15px 0;
 }
 
-/* line 709, ../sass/_custom.scss */
+/* line 794, ../sass/_custom.scss */
 .flex-child {
   flex: 1 1 200px;
   text-align: center;
 }
 
-/* line 713, ../sass/_custom.scss */
+/* line 798, ../sass/_custom.scss */
 .social-list {
   padding-left: 0;
 }
-/* line 715, ../sass/_custom.scss */
+/* line 800, ../sass/_custom.scss */
 .social-list li {
   display: inline-block;
   padding: 7px;
   font-size: 1.7em;
   transition: all 0.5s;
 }
-/* line 720, ../sass/_custom.scss */
+/* line 805, ../sass/_custom.scss */
 .social-list li:hover {
   transform: scale(1.1);
   color: #e6e6e6;
 }
 
-/* line 726, ../sass/_custom.scss */
+/* line 811, ../sass/_custom.scss */
 .footer-nav {
   padding-left: 0;
 }
-/* line 728, ../sass/_custom.scss */
+/* line 813, ../sass/_custom.scss */
 .footer-nav li {
   padding: 7px;
 }
-/* line 730, ../sass/_custom.scss */
+/* line 815, ../sass/_custom.scss */
 .footer-nav li a {
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.5s ease;
 }
-/* line 733, ../sass/_custom.scss */
+/* line 818, ../sass/_custom.scss */
 .footer-nav li a:hover {
   border-bottom: 1px solid white;
 }
 
-/* line 740, ../sass/_custom.scss */
+/* line 825, ../sass/_custom.scss */
 .copyright-footer p {
   padding: 15px;
   margin: 0;
@@ -9782,18 +9897,18 @@ footer {
 
 /*************************MEDIA*************************/
 @media (max-width: 980px) {
-  /* line 748, ../sass/_custom.scss */
+  /* line 833, ../sass/_custom.scss */
   .top-cart {
     right: 20px;
   }
 
-  /* line 751, ../sass/_custom.scss */
+  /* line 836, ../sass/_custom.scss */
   .hamburger-menu {
     margin-right: 65px;
   }
 }
 @media (max-width: 880px) {
-  /* line 756, ../sass/_custom.scss */
+  /* line 841, ../sass/_custom.scss */
   .top-nav li {
     display: block;
     background: forestgreen;
@@ -9803,12 +9918,12 @@ footer {
     margin: 0;
   }
 
-  /* line 764, ../sass/_custom.scss */
+  /* line 849, ../sass/_custom.scss */
   .top-nav li a {
     padding: 15px 70px;
   }
 
-  /* line 767, ../sass/_custom.scss */
+  /* line 852, ../sass/_custom.scss */
   .hamburger-menu {
     display: block;
     width: 70px;
@@ -9818,144 +9933,150 @@ footer {
     margin-right: 50px;
   }
 
-  /* line 775, ../sass/_custom.scss */
+  /* line 860, ../sass/_custom.scss */
   .item-1 {
     top: 54px;
     right: 900px;
   }
 
-  /* line 779, ../sass/_custom.scss */
+  /* line 864, ../sass/_custom.scss */
   .item-2 {
     top: 106px;
     right: 1050px;
   }
 
-  /* line 783, ../sass/_custom.scss */
+  /* line 868, ../sass/_custom.scss */
   .item-3 {
     top: 159px;
     right: 1200px;
   }
 
-  /* line 787, ../sass/_custom.scss */
+  /* line 872, ../sass/_custom.scss */
   .item-4 {
     top: 212px;
     right: 1400px;
   }
 
-  /* line 791, ../sass/_custom.scss */
+  /* line 876, ../sass/_custom.scss */
   .item-5 {
     top: 265px;
     right: 1600px;
   }
 
-  /* line 795, ../sass/_custom.scss */
+  /* line 880, ../sass/_custom.scss */
   .item-6 {
     top: 318px;
     right: 1800px;
   }
 
-  /* line 799, ../sass/_custom.scss */
+  /* line 884, ../sass/_custom.scss */
   .item-7 {
     top: 371px;
     right: 2000px;
   }
 
-  /* line 803, ../sass/_custom.scss */
+  /* line 888, ../sass/_custom.scss */
   .item-to-hide {
     right: 0;
   }
 
-  /* line 806, ../sass/_custom.scss */
-  .pop-up-form input[type="text"]:focus {
-    width: 70%;
-  }
-
-  /* line 809, ../sass/_custom.scss */
+  /* line 891, ../sass/_custom.scss */
   .order-form div {
     width: 100%;
   }
 }
 @media (max-width: 767px) {
-  /* line 818, ../sass/_custom.scss */
+  /* line 896, ../sass/_custom.scss */
   .hamburger-menu {
     margin-right: 45px;
   }
 
-  /* line 821, ../sass/_custom.scss */
+  /* line 899, ../sass/_custom.scss */
   .products-grid .product-item {
     width: 33.333%;
   }
+
+  /* line 902, ../sass/_custom.scss */
+  .sidebar {
+    border-radius: 0;
+  }
 }
 @media (max-width: 560px) {
-  /* line 826, ../sass/_custom.scss */
+  /* line 907, ../sass/_custom.scss */
   .products-grid .product-item {
     width: 50%;
   }
 
-  /* line 829, ../sass/_custom.scss */
+  /* line 910, ../sass/_custom.scss */
   .product h4 {
     height: 70px;
-    font-size: 1.8em;
+    font-size: 1.2em;
   }
 
-  /* line 833, ../sass/_custom.scss */
+  /* line 914, ../sass/_custom.scss */
   .price-wrapper p {
-    font-size: 1.6em;
+    font-size: 1.2em;
   }
 
-  /* line 836, ../sass/_custom.scss */
+  /* line 917, ../sass/_custom.scss */
   .shop-list li a {
     font-size: 1.5em;
   }
 
-  /* line 839, ../sass/_custom.scss */
+  /* line 920, ../sass/_custom.scss */
   .price-wrapper .buy-button {
     padding: 10px 15px;
   }
 
-  /* line 842, ../sass/_custom.scss */
-  .close-button {
-    top: 0;
-    right: 3px;
-    background: white;
-    color: red !important;
-    font-size: 2em;
+  /* line 923, ../sass/_custom.scss */
+  .hidden-description p {
+    font-size: 1.5em;
   }
 
-  /* line 849, ../sass/_custom.scss */
-  .close-button:hover {
-    background: #fff;
+  /* line 926, ../sass/_custom.scss */
+  .top-nav li a {
+    font-size: 1.2em;
   }
 
-  /* line 852, ../sass/_custom.scss */
-  .pop-up-form {
-    border-radius: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  /* line 859, ../sass/_custom.scss */
+  /* line 929, ../sass/_custom.scss */
   .bottom-header {
     margin-bottom: 20px;
   }
-}
-@media (max-width: 480px) {
-  /* line 865, ../sass/_custom.scss */
-  .logo-contacts {
-    display: none;
+
+  /* line 932, ../sass/_custom.scss */
+  .order-item > div {
+    padding: 10px;
   }
 
-  /* line 868, ../sass/_custom.scss */
-  .products-grid .product-item {
-    width: 100%;
-  }
-
-  /* line 871, ../sass/_custom.scss */
+  /* line 935, ../sass/_custom.scss */
   .products-grid {
     margin-bottom: 100px;
   }
 }
+@media (max-width: 480px) {
+  /* line 941, ../sass/_custom.scss */
+  p {
+    font-size: 1.4em;
+  }
 
-/*# sourceMappingURL=styles.css.map *
+  /* line 944, ../sass/_custom.scss */
+  .logo-contacts {
+    display: none;
+  }
+
+  /* line 947, ../sass/_custom.scss */
+  .close-button {
+    top: 0;
+    right: 3px;
+    background: white;
+    color: #f73939 !important;
+    font-size: 2em;
+  }
+
+  /* line 954, ../sass/_custom.scss */
+  .close-button:hover {
+    background: #fff;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

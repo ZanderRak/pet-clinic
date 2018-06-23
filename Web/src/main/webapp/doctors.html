@@ -21,9 +21,18 @@
       <p>35 Cat st, Boston, 345901, USA</p>
       <p>Phone: 334 9990001</p>
     </div>
-    <div class="registration-buttons">
-      <button id="sign-up-button" name="sign-up">Sign up</button>
-      <button id="log-in-button" name="log-in">Log in</button>
+    <div class="registration-wrap">
+      <div class="registration-buttons" id="registration-buttons">
+        <button id="sign-up-button" name="sign-up-button">
+          <a href="registration.html" target="_blank">Sign up</a>
+        </button>
+        <button id="log-in-button" name="log-in-button">Log in
+        </button>
+      </div>
+      <div id="user">
+        <a href="account.html"></a>
+        <button id="logout">Log out</button>
+      </div>
     </div>
   </div>
 </header>
@@ -56,60 +65,30 @@
     <p>1</p>
   </div>
 </header>
-<!--<<<<<<<<<<<<<<<<<<<<<<Registration Form>>>>>>>>>>>>>>>>>>>>>>>-->
 <main>
-<section id="pop-up-registration-form">
-  <div class="pop-up-form-wrapper">
-    <form class="pop-up-form" method="post">
-      <a href="#" class="close-button" id="close-registration-button">&#10006;</a>
-      <h3>Registration Form</h3>
-      <p>
-        <label for="firstname">First Name:</label>
-        <input id ="firstname" type="text" name="firstname">
-      </p>
-      <p>
-        <label for="lastname">Last Name:</label>
-        <input id="lastname" type="text" name="lastname">
-      </p>
-      <p>
-        <label for="date">Birthday:</label>
-        <input type="date" id="date" name="date"/>
-      </p>
-      <p>
-        <label for="email">Email:</label>
-        <input id="email" type="email" name="email">
-      </p>
-      <p>
-        <label for="password">Password:</label>
-        <input id="password" type="password" name="password">
-      </p>
-      <p>
-        <label for="password-repeat">Password again:</label>
-        <input id="password-repeat" type="password" name="password">
-      </p>
-      <input type="submit" name="submit-button" value="Submit">
-    </form>
-  </div>
-</section>
-<!--<<<<<<<<<<<<<<<<<<<<<<LOG IN Form>>>>>>>>>>>>>>>>>>>>>>>-->
-<section id="pop-up-login-form">
-  <div class="pop-up-form-wrapper">
-    <form class="pop-up-form" method="post">
-      <a href="#" class="close-button" id="close-login-button">&#10006;</a>
-      <h3>Log in</h3>
-      <p>
-        <label for="login-email">Email:</label>
-        <input id="login-email" type="email" name="email">
-      </p>
-      <p>
-        <label for="login-password">Password:</label>
-        <input id="login-password" type="password" name="password">
-      </p>
-      <input type="submit" name="submit-button" value="Submit">
-    </form>
-  </div>
-</section>
-
+  <!--<<<<<<<<<<<<<<<<<<<<<<LOGIN Form>>>>>>>>>>>>>>>>>>>>>>>-->
+  <section id="pop-up-login-section">
+    <div class="pop-up-wrapper">
+      <form class="pop-up-form pop-up-styles" id="login-form">
+        <a href="#" class="close-button" id="close-login-button">&#10006;</a>
+        <h3>Log in</h3>
+        <div>
+          <label for="login-email">Email:</label>
+          <input id="login-email" type="email" name="login-email" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="login-password">Password:</label>
+          <input id="login-password" type="password" name="login-password" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <p id="login-hint"></p>
+        </div>
+        <input id="submit-login-button" type="button" name="login-submit-button" value="Submit">
+      </form>
+    </div>
+  </section>
 <!-- <<<<<<<<<<<<<<<<<MAIN CONTENT>>>>>>>>>>>>>>> -->
 <section class="doctors container">
 <h1>Our doctors</h1>
@@ -124,124 +103,10 @@
   Vestibulum luctus hendrerit aliquam. In id dui
   in quam iaculis cursus.
 </p>
-<ul class="doctors-list">
-  <!-- DOCTOR CARD 1-->
-  <li class="doctor flip-container">
-    <div class="flipper">
-<!-- front side -->
-      <div class="front">
-        <div class="doctor-photo">
-          <img src="static/images/doctor_icon.png" alt="doctor">
-        </div>
-        <div class="doctor-info">
-          <h3>John Smith</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-<!-- back side -->
-      <div class="back">
-        <p>Some text. Cras a magna eget arcu iaculis gravida
-          non ut justo. Sed aliquam, nibh ac scelerisque accumsan,
-          turpis libero vestibulum erat, vel aliquam lacus
-          mauris ut nibh.</p>
-      </div>
-    </div>
-  </li>
-
-  <!-- DOCTOR CARD 2-->
-  <li class="doctor flip-container">
-    <div class="flipper">
-      <!-- front side -->
-      <div class="front">
-        <div class="doctor-photo">
-          <img src="static/images/interactive1.png" alt="doctor">
-        </div>
-        <div class="doctor-info">
-          <h3>Jessica Smith</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <!-- back side -->
-      <div class="back">
-        <p>Some text. Cras a magna eget arcu iaculis gravida
-          non ut justo. Sed aliquam, nibh ac scelerisque accumsan,
-          turpis libero vestibulum erat, vel aliquam lacus
-          mauris ut nibh.</p>
-      </div>
-    </div>
-  </li>
-  <!-- DOCTOR CARD 3-->
-  <li class="doctor flip-container">
-    <div class="flipper">
-      <!-- front side -->
-      <div class="front">
-        <div class="doctor-photo">
-          <img src="static/images/doctor_icon.png" alt="doctor">
-        </div>
-        <div class="doctor-info">
-          <h3>John Smith</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <!-- back side -->
-      <div class="back">
-        <p>Some text. Cras a magna eget arcu iaculis gravida
-          non ut justo. Sed aliquam, nibh ac scelerisque accumsan,
-          turpis libero vestibulum erat, vel aliquam lacus
-          mauris ut nibh.</p>
-      </div>
-    </div>
-  </li>
-  <!-- DOCTOR CARD 4-->
-  <li class="doctor flip-container">
-    <div class="flipper">
-      <!-- front side -->
-      <div class="front">
-        <div class="doctor-photo">
-          <img src="static/images/doctor_icon.png" alt="doctor">
-        </div>
-        <div class="doctor-info">
-          <h3>John Smith</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <!-- back side -->
-      <div class="back">
-        <p>Some text. Cras a magna eget arcu iaculis gravida
-          non ut justo. Sed aliquam, nibh ac scelerisque accumsan,
-          turpis libero vestibulum erat, vel aliquam lacus
-          mauris ut nibh.</p>
-      </div>
-    </div>
-  </li>
-  <!-- DOCTOR CARD 5-->
-  <li class="doctor flip-container">
-    <div class="flipper">
-      <!-- front side -->
-      <div class="front">
-        <div class="doctor-photo">
-          <img src="static/images/doctor_icon.png" alt="doctor">
-        </div>
-        <div class="doctor-info">
-          <h3>John Smith</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <!-- back side -->
-      <div class="back">
-        <p>Some text. Cras a magna eget arcu iaculis gravida
-          non ut justo. Sed aliquam, nibh ac scelerisque accumsan,
-          turpis libero vestibulum erat, vel aliquam lacus
-          mauris ut nibh.</p>
-      </div>
-    </div>
-  </li>
-
-</ul>
+<ul class="doctors-list"></ul>
 </section>
 </main>
 <!--<<<<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>>>>>>>-->
-
 <footer>
   <div class="top-footer flex-container">
     <div class="flex-child">
@@ -268,12 +133,29 @@
     <p>&copy; 2018 Pet Clinic</p>
   </div>
 </footer>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="static/javascripts/bootstrap.min.js"></script>
-<script src="static/javascripts/allscripts.js"></script>
+<script src="static/javascripts/common.js"></script>
+<script src="static/javascripts/login.js"></script>
+<script src="static/javascripts/doctors-ajax.js"></script>
 
-
+<script id="template-list-item" type="text/template">
+  <li class="doctor flip-container">
+    <div class="flipper">
+      <div class="front">
+        <div class="doctor-photo">
+          <img src="{{img}}">
+        </div>
+        <div class="doctor-info">
+          <h3>{{name}}</h3>
+          <p>{{spec}}</p>
+        </div>
+      </div>
+      <div class="back">
+        <p>{{descr}}</p>
+      </div>
+    </div>
+  </li>
+</script>
 </body>
 </html>

@@ -21,9 +21,18 @@
       <p>35 Cat st, Boston, 345901, USA</p>
       <p>Phone: 334 9990001</p>
     </div>
-    <div class="registration-buttons">
-      <button id="sign-up-button" name="sign-up">Sign up</button>
-      <button id="log-in-button" name="log-in">Log in</button>
+    <div class="registration-wrap">
+      <div class="registration-buttons" id="registration-buttons">
+        <button id="sign-up-button" name="sign-up-button">
+          <a href="registration.html" target="_blank">Sign up</a>
+        </button>
+        <button id="log-in-button" name="log-in-button">Log in
+        </button>
+      </div>
+      <div id="user">
+        <a href="account.html"></a>
+        <button id="logout">Log out</button>
+      </div>
     </div>
   </div>
 </header>
@@ -45,7 +54,6 @@
             </form>
           </li>
         </ul>
-
       </nav>
     </div>
   </div>
@@ -56,60 +64,30 @@
     <p>1</p>
   </div>
 </header>
-<!--<<<<<<<<<<<<<<<<<<<<<<Registration Form>>>>>>>>>>>>>>>>>>>>>>>-->
 <main>
-<section id="pop-up-registration-form">
-  <div class="pop-up-form-wrapper">
-    <form class="pop-up-form" method="post">
-      <a href="#" class="close-button" id="close-registration-button">&#10006;</a>
-      <h3>Registration Form</h3>
-      <p>
-        <label for="firstname">First Name:</label>
-        <input id ="firstname" type="text" name="firstname">
-      </p>
-      <p>
-        <label for="lastname">Last Name:</label>
-        <input id="lastname" type="text" name="lastname">
-      </p>
-      <p>
-        <label for="date">Birthday:</label>
-        <input type="date" id="date" name="date"/>
-      </p>
-      <p>
-        <label for="email">Email:</label>
-        <input id="email" type="email" name="email">
-      </p>
-      <p>
-        <label for="password">Password:</label>
-        <input id="password" type="password" name="password">
-      </p>
-      <p>
-        <label for="password-repeat">Password again:</label>
-        <input id="password-repeat" type="password" name="password">
-      </p>
-      <input type="submit" name="submit-button" value="Submit">
-    </form>
-  </div>
-</section>
-<!--<<<<<<<<<<<<<<<<<<<<<<LOG IN Form>>>>>>>>>>>>>>>>>>>>>>>-->
-<section id="pop-up-login-form">
-  <div class="pop-up-form-wrapper">
-    <form class="pop-up-form" method="post">
-      <a href="#" class="close-button" id="close-login-button">&#10006;</a>
-      <h3>Log in</h3>
-      <p>
-        <label for="login-email">Email:</label>
-        <input id="login-email" type="email" name="email">
-      </p>
-      <p>
-        <label for="login-password">Password:</label>
-        <input id="login-password" type="password" name="password">
-      </p>
-      <input type="submit" name="submit-button" value="Submit">
-    </form>
-  </div>
-</section>
-
+  <!--<<<<<<<<<<<<<<<<<<<<<<LOGIN Form>>>>>>>>>>>>>>>>>>>>>>>-->
+  <section id="pop-up-login-section">
+    <div class="pop-up-wrapper">
+      <form class="pop-up-form pop-up-styles" id="login-form">
+        <a href="#" class="close-button" id="close-login-button">&#10006;</a>
+        <h3>Log in</h3>
+        <div>
+          <label for="login-email">Email:</label>
+          <input id="login-email" type="email" name="login-email" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="login-password">Password:</label>
+          <input id="login-password" type="password" name="login-password" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <p id="login-hint"></p>
+        </div>
+        <input id="submit-login-button" type="button" name="login-submit-button" value="Submit">
+      </form>
+    </div>
+  </section>
 <!--<<<<<<<<<<<<<<<<<<<<<<SHOP>>>>>>>>>>>>>>>>>>>>>>>-->
 <section class="shop container">
   <ul class="shop-list">
@@ -422,7 +400,7 @@
 </section>
 </main>
 <div id="up-button">
-  <a href="#">^</a>
+  <a href="#"><i class="fas fa-angle-up"></i></a>
 </div>
 <!--<<<<<<<<<<<<<<<<<<<<<<FOOTER>>>>>>>>>>>>>>>>>>>>>>>-->
 <footer>
@@ -451,50 +429,10 @@
     <p>&copy; 2018 Pet Clinic</p>
   </div>
 </footer>
-
-<script>
-    //**********DESCRIPTION OF THE PRODUCT*********
-    //*********************************************
-    //**********  variables and functions**********
-    var productsGrid = document.getElementsByClassName('products-grid')[0];
-    var productDescriptions = document.getElementsByClassName('hidden-description');
-
-    function showProductDescription(descriptionNode) {
-        descriptionNode.classList.add('shown-description');
-    }
-
-    function hideProductDescription() {
-        for (i = 0; i < productDescriptions.length; i++) {
-            productDescriptions[i].classList.remove('shown-description');
-        }
-    }
-    //*******Event listener to show and hide description of the product*******
-    productsGrid.addEventListener('mouseover',
-        function productDescriptionEvent(event) {
-
-            var target = event.target;
-
-            if (productsGrid.querySelectorAll('shown-description')) {
-                hideProductDescription();
-            }
-
-            while (target !== this) {    //bubbling
-                if (target.tagName === 'LI') {
-                    showProductDescription(target.lastElementChild);
-                }
-                target = target.parentNode;
-            }
-        });
-    //*******Hide description on body click*******
-    document.body.addEventListener("click", function() {
-
-        if (document.body.querySelectorAll('shown-description')) {
-            hideProductDescription();
-        }
-    });
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="static/javascripts/bootstrap.min.js"></script>
-<script src="static/javascripts/allscripts.js"></script>
+<script src="static/javascripts/common.js"></script>
+<script src="static/javascripts/login.js"></script>
+<script src="static/javascripts/shop.js"></script>
 </body>
 </html>

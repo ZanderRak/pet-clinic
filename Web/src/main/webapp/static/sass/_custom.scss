@@ -86,6 +86,27 @@ a, a:hover, a:visited, a:active, a:focus {
     width: 70px;
   }
 }
+#user {
+  display: none;
+  a {
+    color: black;
+    text-decoration: underline;
+    display: inline-block;
+    padding-right: 10px;
+  }
+  button {
+    display: inline-block;
+    font-weight: normal;
+    padding: 0;
+    background: transparent;
+    color: $dark-gray;
+    &::before {
+      content: "|";
+      color: black;
+      margin-right: 10px;
+    }
+  }
+}
 #sign-up-button {
   background-image: linear-gradient(to top, #f73939, #ffe256);
 }
@@ -178,18 +199,18 @@ li.item-7 {
   }
   p {
     font-size: 15px;
-    color: red;
+    color: $custom-red;
     position: absolute;
     left: 17px;
     top: 9px;
     font-weight: bold;
   }
 }
-/****************************Pop-up-form****************************/
-#pop-up-registration-form, #pop-up-login-form {
+/****************************Pop-up-forms****************************/
+ #pop-up-login-section {
   display: none;
 }
-.pop-up-form-wrapper {
+.pop-up-wrapper {
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
@@ -201,36 +222,55 @@ li.item-7 {
   color: #000;
 }
 .pop-up-form {
-  background: #fff;
-  border: $light-gray;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 10px 40px;
-  border-radius: 3px;
-  position: relative;
-  top: 10%;
+
   h3 {
     margin-bottom: 30px;
   }
-  p {
-    margin-bottom: 20px;
+  div {
+    margin-bottom: 15px;
   }
   label {
     display: inline-block;
-    width: 27%;
-    color: #000;
+    width: 40%;
+    color: black;
+     sup {
+      color: $custom-red;
+    }
   }
   input {
     display: inline-block;
-    width: 62%;
+    width: 56%;
+    color: black;
   }
-  input[type="submit"] {
+  input[type="button"] {
+    width: auto;
     background: $main-color;
-    box-shadow: none;
+    padding: 7px 30px;
     border: 1px solid $main-color;
-    color: #fff;
     margin: 15px;
+    color: white;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color: $main-dark-color;
+    }
   }
+  p.invalid-hint {
+    position: absolute;
+    visibility: hidden;
+    color: $custom-red;
+    margin-left: 45%;
+    width: auto;
+    text-align: left;
+    margin-top: 8px;
+    font-size: 1em;
+  }
+  p.show-invalid-hint {
+    position: static;
+    visibility: visible;
+  }
+}
+.invalid-input {
+  border: 1px solid $custom-red;
 }
 .close-button {
   position: absolute;
@@ -242,10 +282,51 @@ li.item-7 {
   color: #fff;
   padding: 6px 10px;
   transition: background 0.5s;
+  &:hover {
+    background: $custom-red;
+  }
 }
-
-.close-button:hover {
-  background: red;
+.pop-up-styles {
+  background: #fff;
+  max-width: 400px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 30px 10px rgba(0,0,0,0.1);
+  border-radius: 3px;
+  position: relative;
+}
+#login-form {
+  margin: 0 auto;
+  padding: 10px 25px;
+  margin-top: 10%;
+  label {
+    width: 26%;
+  }
+  input {
+    width: 70%;
+  }
+  input[type="button"] {
+    width: auto;
+  }
+}
+.registration-wrapper {
+  text-align: center;
+  color: black;
+  background: #eee;
+}
+#registration-form {
+  background: white;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 10px 40px;
+}
+#regular-pop-up {
+  padding: 35px;
+  max-width: 300px;
+  margin: 10% auto;
+}
+#onsubmit-hint, #login-hint {
+  color: $custom-red;
+  margin-top: 20px;
 }
 
 /*******************************Interactive********************************/
@@ -364,10 +445,14 @@ form.request-appointment {
 }
 .active-service {
 ///////////////////////////////////////
-//////////////////////////  class accordion tozche
+//////////////////////////
+  text-decoration: underline;
 }
 .shown {
   display: block !important;
+}
+.hidden {
+  display: none !important;
 }
 
 /************************DOCTORS_PAGE*************************/
@@ -386,7 +471,6 @@ form.request-appointment {
     max-width: 800px;
     margin: 10px;
   }
-
 }
 .doctors-list {
   margin-bottom: 40px;
@@ -397,10 +481,9 @@ form.request-appointment {
     text-align: center;
     .doctor-photo {
       width: 100%;
-      height: 205px;
       img {
         padding: 25px;
-        height: 100%;
+        width: 100%;
       }
     }
     .doctor-info {
@@ -413,7 +496,7 @@ form.request-appointment {
       }
       p {
         color: $dark-gray;
-        padding-top: 0;
+        padding: 0 25px;
         font-style: italic;
       }
     }
@@ -428,8 +511,8 @@ form.request-appointment {
   transform: rotateY(180deg);
 }
 .flip-container, .front, .back {
-
-  height: 312px;
+  height: 330px;
+  border-radius: 3px;
 }
 .flipper {
   transition: 0.8s;
@@ -450,6 +533,9 @@ form.request-appointment {
 }
 .back {
   transform: rotateY(180deg);
+  p {
+    padding: 15px;
+  }
 }
 
 /*************************SHOP_PAGE**************************/
@@ -476,7 +562,7 @@ form.request-appointment {
   }
 }
 .products-grid {
-  margin: 40px -20px 40px 0;
+  margin: 20px -20px 40px 0;
   display: flex;
   flex-flow: row wrap;
   .product-item {
@@ -513,7 +599,6 @@ form.request-appointment {
   }
   h4 {
     text-align: justify;
-    margin-bottom: 15px;
     font-size: 1em;
     line-height: 1.2;
     overflow: hidden;
@@ -551,6 +636,7 @@ form.request-appointment {
     margin-bottom: 10px;
     display: block;
     text-align: center;
+    transform: rotate(180deg);
   }
   p {
     color: black;
@@ -603,13 +689,12 @@ section.cart {
     color: black;
     display: inline-block;
     width: 32%;
-    span {
-      color: #af0002;
+    sup {
+      color: $custom-red;
     }
   }
 }
 //////////////////////////////
-
 .order-list {
   display: flex;
   flex-flow: column nowrap;
@@ -803,23 +888,19 @@ footer {
     .item-to-hide {
       right: 0;
     }
-    .pop-up-form input[type="text"]:focus {
-      width: 70%;
-    }
     .order-form div {
       width: 100%;
     }
   }
-  @media (max-width: 768px) {
-
-  }
-
   @media (max-width: 767px) {
     .hamburger-menu {
       margin-right: 45px;
     }
     .products-grid .product-item {
       width: 33.333%;
+    }
+    .sidebar {
+      border-radius: 0;
     }
   }
   @media (max-width: 560px) {
@@ -828,10 +909,10 @@ footer {
     }
     .product h4 {
       height: 70px;
-      font-size: 1.8em;
+      font-size: 1.2em;
     }
     .price-wrapper p {
-      font-size: 1.6em;
+      font-size: 1.2em;
     }
     .shop-list li a {
       font-size: 1.5em;
@@ -839,37 +920,39 @@ footer {
     .price-wrapper .buy-button {
       padding: 10px 15px;
     }
-    .close-button {
-      top: 0;
-      right: 3px;
-      background: white;
-      color: red !important;
-      font-size: 2em;
+    .hidden-description p {
+      font-size:1.5em;
     }
-    .close-button:hover {
-      background: #fff;
-    }
-    .pop-up-form {
-      border-radius: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+    .top-nav li a {
+      font-size: 1.2em;
     }
     .bottom-header {
       margin-bottom: 20px;
     }
-  }
-
-  @media (max-width: 480px) {
-    .logo-contacts {
-      display: none;
-    }
-    .products-grid .product-item {
-      width: 100%;
+    .order-item > div {
+      padding: 10px;
     }
     .products-grid {
       margin-bottom: 100px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    p {
+      font-size: 1.4em;
+    }
+    .logo-contacts {
+      display: none;
+    }
+    .close-button {
+      top: 0;
+      right: 3px;
+      background: white;
+      color: $custom-red !important;
+      font-size: 2em;
+    }
+    .close-button:hover {
+      background: #fff;
     }
   }
 

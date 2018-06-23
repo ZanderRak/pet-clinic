@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Clinic</title>
+  <link rel="stylesheet" href="static/stylesheets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="shortcut icon" href="static/images/paw.png">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script|Open+Sans" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <style>
+    html {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+<!--<<<<<<<<<<<<<<<<<<<<<<Registration Form>>>>>>>>>>>>>>>>>>>>>>>-->
+  <section>
+    <div class="registration-wrapper">
+      <form class="pop-up-form pop-up-styles" id="registration-form">
+        <h3>Registration Form</h3>
+        <div>
+          <label for="firstName">First Name: <sup>*</sup></label>
+          <input id="firstName" type="text" name="firstName" value="Eric" required autofocus/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="lastName">Last Name: <sup>*</sup></label>
+          <input id="lastName" type="text" name="lastName" value="Fox" required/>
+          <p class="invalid-hint">Error with some long long long message</p>
+        </div>
+        <div>
+          <label for="birthday">Birthday:</label>
+          <input id="birthday" type="date" name="birthday"/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="email">Email: <sup>*</sup></label>
+          <input id="email" type="email" name="email" placeholder="example@gmail.com"required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="phone">Phone:</label>
+          <input id="phone" type="text" name="phone" placeholder="+200 000 0000"/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="password">Password: <sup>*</sup></label>
+          <input id="password" type="password" name="password" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <label for="repitedPassword">Password again: <sup>*</sup></label>
+          <input id="repitedPassword" type="password" name="repitedPassword" required/>
+          <p class="invalid-hint">Error</p>
+        </div>
+        <div>
+          <p id="onsubmit-hint"></p>
+        </div>
+        <input id="submit-registration-button" type="button" name="submitButton" value="Submit"/>
+      </form>
+    </div>
+  </section>
+  <!--<<<<<<<<<<<<<<<REGULAR POPUP>>>>>>>>>>>>>>>>>>---->
+  <section id="pop-up-section" class="hidden">
+    <div class="registration-wrapper">
+      <div class='pop-up-styles' id='regular-pop-up'>
+        <a href='#' class='close-button' id='close-popup-button'>&#10006;</a>
+        <div id="message"></div>
+      </div>
+    </div>
+  </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="static/javascripts/bootstrap.min.js"></script>
+<script src="static/javascripts/registration.js"></script>
+</body>
+</html>
